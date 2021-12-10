@@ -1,19 +1,20 @@
 gsap.registerPlugin(ScrollTrigger)
+let cont = document.querySelector('.container')
 let locoScroll = new LocomotiveScroll({
-    el: document.body,
+    el: cont,
     smooth: true,
     multiplier: 1.9
 })
 
 locoScroll.on("scroll", ScrollTrigger.update)
-ScrollTrigger.scrollerProxy(document.body, {
+ScrollTrigger.scrollerProxy(cont, {
     scrollTop(value){
         return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
     },
     getBoundingClientRect(){
         return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
     },
-    pinType: document.body.style.transform ? "transform" : "fixed"
+    pinType: cont.style.transform ? "transform" : "fixed"
 });
 
 gsap.to('.nav', {

@@ -58,8 +58,6 @@
     place-items: center;
     /* margin: 20px auto; */
     padding: 40px 7vw;
-    left: 50%;
-    transform: translate(-50%);
     color: white;
     z-index: 5;
     box-sizing: border-box;
@@ -245,14 +243,13 @@ body {
     cursor: pointer;
 }
 
-.nav {
+/* .nav {
     position: fixed;
     top: 0;
     width: 100vw;
     display: grid;
     grid-template-columns: repeat(3, 33%);
     place-items: center;
-    /* margin: 20px auto; */
     padding: 40px 7vw;
     left: 50%;
     transform: translate(-50%);
@@ -279,12 +276,11 @@ body {
 
 .nav>div>div {
     position: relative;
-    /* margin: 20px auto; */
     width: max-content;
     padding: 15px 20px;
     cursor: pointer;
     border: solid 1px white;
-}
+} */
 
 .logo>img {
     width: 100%;

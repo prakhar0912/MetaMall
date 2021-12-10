@@ -16,9 +16,9 @@
     <title>Kuvalyam</title>
 </head>
 
-<body>
+<body data-scroll-id="a">
     <div class="container">
-        <div class="nav">
+        <div class="nav" data-scroll data-scroll-sticky data-scroll-target="body">
             <div class="left no-mobile">
                 <p>WHITEPENCIL</p>
                 <p onclick="location.href = './aboutUs.html'">TEAM</p>
@@ -50,7 +50,7 @@
                 <img onclick="location.href = './index.html'" src="./imgg/pre.svg" alt="">
             </div>
         </div>
-        <section class="without" data-scroll-delay="1" data-scroll-speed="-3">
+        <section class="without" data-scroll data-scroll-speed="-8">
             <div class="video parallax">
                 <div class="overlay top"></div>
                 <video src="./back.mp4" autoplay muted loop></video>
@@ -86,7 +86,7 @@
                 <section class="vr">
                     <div>
                         <div>
-                            <img class="skewElem1" src="./imgg/vr.png" alt="">
+                            <img data-scroll data-scroll-speed="1" class="skewElem1" src="./imgg/vr.png" alt="">
                         </div>
                         <div>
                             <h1>The Unique</h1>
