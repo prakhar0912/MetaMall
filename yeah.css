@@ -3,14 +3,14 @@
     src: url(./font/NeueMachina-Regular.otf);
 }
 
-@font-face{
-  font-family: NeueL;
-  src: url(./font/NeueMachina-Light.otf);
+@font-face {
+    font-family: NeueL;
+    src: url(./font/NeueMachina-Light.otf);
 }
 
-@font-face{
-  font-family: NeueB;
-  src: url(./font/NeueMachina-Ultrabold.otf);
+@font-face {
+    font-family: NeueB;
+    src: url(./font/NeueMachina-Ultrabold.otf);
 }
 
 /* width */
@@ -163,7 +163,7 @@ section:nth-of-type(1) {
     cursor: pointer;
 }
 
-.samp{
+.samp {
     height: 40vh;
 }
 
@@ -353,7 +353,7 @@ p {
     font-family: NeueB, Courier, monospace;
 }
 
-.h1 > b{
+.h1>b {
     font-family: NeueB, Courier, monospace;
 }
 
@@ -513,7 +513,7 @@ p {
         0 0 20px 4px #fff,
         0 0 140px 50px #CDF0FF; */
 
-        box-shadow: 0px 0px 10px #ffffff;
+    box-shadow: 0px 0px 10px #ffffff;
     /* outer cyan */
     left: 0px;
     z-index: 1;
@@ -582,18 +582,19 @@ section {
     position: relative;
     align-self: center;
     text-align: center;
+    width: 80%;
+    margin: auto;
 }
 
 .intro>.left {
     position: absolute;
-    left: 0;
+    left: -105px;
     bottom: 10px;
-    transform: translateX(-55%);
 }
 
 .intro>.right {
     position: absolute;
-    right: 0;
+    right: -105px;
     top: 10px;
     transform: translateX(60%);
     z-index: 1;
@@ -605,14 +606,14 @@ section:nth-of-type(2) {
     place-items: center;
 }
 
-.vr > div {
+.vr>div {
     max-height: max-content;
     display: grid;
     grid-template-columns: 100%;
     place-items: center;
 }
 
-.vr>div>div:nth-of-type(1) > img{
+.vr>div>div:nth-of-type(1)>img {
     width: 202px;
 }
 
@@ -652,7 +653,7 @@ section:nth-of-type(3)>h1 {
     grid-template-columns: 30% 70%;
 }
 
-.heart > div:nth-of-type(2){
+.heart>div:nth-of-type(2) {
     text-align: right;
 }
 
@@ -665,7 +666,7 @@ section:nth-of-type(3)>h1 {
     min-height: 110vh;
 }
 
-.roadmap > div, .roadmap > div > img{
+.roadmap>div, .roadmap>div>img {
     width: 100%;
 }
 
@@ -680,7 +681,7 @@ section:nth-of-type(3)>h1 {
     margin-top: 100px;
 }
 
-.team > div:first-of-type{
+.team>div:first-of-type {
     padding-left: 5%;
 }
 
@@ -695,6 +696,31 @@ section:nth-of-type(3)>h1 {
     display: block;
     width: 90%;
     margin: 0 auto;
+}
+
+.dude {
+    position: relative;
+    background: rgba(255, 255, 255, 0.07);
+    border: 0.6px solid #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 44px rgba(205, 240, 255, 0.2);
+    backdrop-filter: blur(4px);
+    min-height: 700px;
+    width: 85%;
+    margin: 0 auto;
+    border-radius: 20px;
+    text-align: center;
+    padding: 40px 7%;
+}
+
+.dude > h1{
+    font-size: 1.6rem;
+    margin: 15px 0;
+}
+
+.dude > h3{
+    font-family: NeueB, sans-serif;
+    font-size: 1.1rem;
 }
 
 .mobile {
@@ -720,7 +746,7 @@ section:nth-of-type(3)>h1 {
 }
 
 @media(max-width: 1000px) {
-    section:nth-of-type(6)>div:first-of-type{
+    section:nth-of-type(6)>div:first-of-type {
         grid-template-columns: 30% 70%;
         column-gap: 20px;
     }
@@ -760,15 +786,15 @@ section:nth-of-type(3)>h1 {
         background: transparent !important;
     }
 
-    .overlayy{
+    .overlayy {
         height: calc(var(--vh, 1vh) * 100)
     }
 
-    .slides{
+    .slides {
         background: none;
     }
 
-    .middle-line{
+    .middle-line {
         opacity: 0.15;
     }
 
@@ -860,7 +886,7 @@ section:nth-of-type(3)>h1 {
         margin-right: 10px;
     }
 
-    .vr > div{
+    .vr>div {
         width: 90%;
     }
 
@@ -889,7 +915,7 @@ section:nth-of-type(3)>h1 {
         align-self: flex-end;
     }
 
-    .roadmap{
+    .roadmap {
         padding: 100px 0;
     }
 
