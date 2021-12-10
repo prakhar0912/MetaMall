@@ -1,5 +1,5 @@
 gsap.registerPlugin(ScrollTrigger)
-let cont = document.querySelector('.container')
+let cont = document.querySelector('body')
 let locoScroll = new LocomotiveScroll({
     el: cont,
     smooth: true,
@@ -21,11 +21,11 @@ gsap.to('.nav', {
     scrollTrigger: {
         trigger: "section.without",
         start: "middle",
-        scroller: "section.without",
+        scroller: cont,
         scrub: true,
         markers: false,
     },
-    background: '#19312E',
+    background: 'black',
     paddingTop: '20px',
     paddingBottom: '20px'
     // color: 'black'
@@ -103,7 +103,7 @@ gsap.to('.yeah > .left-line > .left-block', {
     scrollTrigger: {
         trigger: '.yeah',
         scrub: true,
-        scroller: '.yeah',
+        scroller: cont,
         start: "top top",
     },
     top: "90%"
@@ -113,7 +113,7 @@ gsap.to('.yeah > .right-line > .right-block', {
     scrollTrigger: {
         trigger: '.yeah',
         scrub: true,
-        scroller: '.yeah',
+        scroller: cont,
         start: "top top",
     },
     top: "60%"

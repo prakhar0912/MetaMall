@@ -32,11 +32,11 @@
                 <img src="./imgg/telegram.svg" alt="">
             </div>
         </div>
-        <div class="burger mobile">
+        <div class="burger mobile" data-scroll data-scroll-sticky data-scroll-target="body">
             <div class="nline"></div>
             <div class="nline"></div>
         </div>
-        <div class="mob-nav mobile grid">
+        <div class="mob-nav mobile grid" data-scroll data-scroll-sticky data-scroll-target="body">
             <div class="links">
                 <button onclick="location.href = '#'">Home</button>
                 <button
@@ -52,13 +52,22 @@
         </div>
         <section class="without" data-scroll data-scroll-speed="-8">
             <div class="video parallax">
-                <div class="overlay top"></div>
+                <div class="overlay top">
+                    
+                </div>
+                <div class="noverlay">
+                    <div class="left-line liner">
+                        <!-- <div class='block left-block'></div> -->
+                    </div>
+                    <div></div>
+                    <div class="right-line liner">
+                        <!-- <div class='block left-block'></div> -->
+                    </div>
+                </div>
                 <video src="./back.mp4" autoplay muted loop></video>
             </div>
             <div class="center">
-                <!-- <img src="./img/section1.svg" alt="">
-                <div onclick="document.querySelector('#projects').scrollIntoView({behavior: 'smooth'})">Explore Projects
-                </div> -->
+
             </div>
         </section>
 

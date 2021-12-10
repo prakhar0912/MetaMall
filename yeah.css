@@ -297,6 +297,24 @@ body {
     background-color: black;
     opacity: 0.4;
     z-index: 11;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+}
+
+.noverlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+}
+
+.overlay > .liner{
+    z-index: 12;
+    opacity: 1;
 }
 
 section:nth-of-type(1)>.center>img {
@@ -310,7 +328,7 @@ section:nth-of-type(1) {
 
 .parallax {
     /* position: fixed; */
-    width: 100vw;
+    /* width: 100vw; */
     /* display: flex;
     justify-content: center;
     left: 0;
@@ -321,7 +339,8 @@ section:nth-of-type(1) {
 
 .parallax>video, .slide-bg>img {
     width: 100%;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
 }
 
 
@@ -396,7 +415,7 @@ p {
     width: 100vw;
     display: grid;
     grid-template-columns: 10% 80% 10%;
-    background-color: rgb(5, 5, 5);
+    background-color: rgb(8, 8, 8);
 }
 
 /* section:not(.without) {
@@ -588,13 +607,13 @@ section {
 
 .intro>.left {
     position: absolute;
-    left: -105px;
+    left: -5vw;
     bottom: 10px;
 }
 
 .intro>.right {
     position: absolute;
-    right: -105px;
+    right: -1vw;
     top: 10px;
     transform: translateX(60%);
     z-index: 1;
@@ -830,7 +849,7 @@ section:nth-of-type(3)>h1 {
         min-height: calc(var(--vh, 1vh) * 100)
     }
 
-    .yeah, .slide-grid {
+    .yeah, .slide-grid, .noverlay {
         grid-template-columns: 2% 96% 2%;
     }
 
