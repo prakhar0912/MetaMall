@@ -57,7 +57,7 @@
     grid-template-columns: repeat(3, 33%);
     place-items: center;
     /* margin: 20px auto; */
-    padding: 40px 7vw;
+    padding: 10px 7vw;
     color: white;
     z-index: 5;
     box-sizing: border-box;
@@ -148,7 +148,7 @@
 
 .burger {
     position: fixed;
-    top: 20px;
+    top: 40px;
     right: 20px;
     height: 25px;
     width: 35px;
@@ -322,6 +322,11 @@ body {
     position: relative;
 }
 
+.img > img:not(.rot), .img > div > img:not(.rot){
+    width: 80%;
+
+}
+
 .img > div{
     position: relative;
 }
@@ -383,6 +388,16 @@ p {
 section:not(.without) {
     background: linear-gradient(0deg, #000000b2 0%, rgba(0, 0, 0, 0) 80%);
 } */
+
+.center{
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    place-items: center;
+}
 
 .top-nav {
     position: fixed;
@@ -634,7 +649,7 @@ p.small{
     place-items: center;
     width: 100%;
     height: max-content;
-    min-height: 110vh;
+    min-height: 100vh;
 }
 
 .roadmap>div, .roadmap>div>img {
@@ -647,7 +662,7 @@ p.small{
     align-items: center;
     width: 100%;
     height: max-content;
-    min-height: 110vh;
+    min-height: 100vh;
     padding: 80px 0 100px 0;
     margin-top: 100px;
 }
@@ -700,7 +715,7 @@ p.small{
     grid-template-columns: 100%;
     place-items: center;
     width: 90%;
-    min-height: 70vh;
+    min-height: 50vh;
     margin: 0 auto;
 }
 
@@ -708,7 +723,7 @@ p.small{
     position: relative;
     display: grid;
     grid-template-columns: repeat(5, 20%);
-    margin: 200px auto;
+    margin: 150px auto;
     place-items: center;
     /* width: 90%; */
 }
@@ -747,14 +762,14 @@ p.small{
 
 @media(max-width: 1500px) {
     .nav {
-        padding: 20px 10vw;
+        padding: 10px 10vw;
     }
 
 }
 
 @media(max-width: 1300px) {
     .nav {
-        padding: 20px 5vw;
+        padding: 10px 5vw;
     }
 
     .nav>div>p, .nav>div>div {
@@ -793,6 +808,7 @@ p.small{
 
     .nav {
         grid-template-columns: 100%;
+        padding: 0;
     }
 
     .center>img {
@@ -940,8 +956,11 @@ p.small{
         row-gap: 150px;
     }
 
-    .img img:not(.rot) {
+    .img > img:not(.rot), .img > div > img:not(.rot){
+        width:max-content;
         max-width: 85vw;
+        margin: 0 auto;
+        display: block;
     }
 
     .wrap{
@@ -954,37 +973,35 @@ p.small{
         font-size: 2rem;
     }
 
-    /* .vr>div {
-        width: 90%;
-    } */
-
-    /* .coin, .heart, .joys {
-        grid-template-columns: 100%;
-        min-height: 90vh;
+    .rot{
+        transform: translate(0%, -50%);
     }
 
 
-    .coin>div:first-of-type, .joys>div:first-of-type {
-        order: 2;
-        align-self: flex-start;
+
+    .rot1{
+        left: 40vw !important;
     }
 
-    .coin>div:last-of-type, .joys>div:last-of-type {
-        padding-bottom: 20px;
-        align-self: flex-end;
+
+    .rot2{
+        left: 28vw !important;
     }
 
-    .heart>div:last-of-type {
-        align-self: flex-start;
+    .rot3{
+        left: 41vw !important;
     }
 
-    .heart>div:first-of-type {
-        padding-bottom: 20px;
-        align-self: flex-end;
-    } */
+    .rot4{
+        left: 40vw !important;
+    }
+
+    .rot5{
+        left: 40vw !important;
+    }
 
     .roadmap {
-        padding: 100px 0;
+        padding: 0px 0;
     }
 
 

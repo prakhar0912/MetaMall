@@ -100,8 +100,8 @@ gsap.to('.nav', {
         markers: false,
     },
     background: 'black',
-    paddingTop: '20px',
-    paddingBottom: '20px'
+    paddingTop: '5px',
+    paddingBottom: '5px'
 })
 
 
@@ -194,7 +194,7 @@ gsap.to('.yeah > .right-line > .right-block', {
 
 document.querySelectorAll(".content-container > section").forEach((el, i) => {
     let ele = el.querySelector(".rot")
-    // gsap.set(ele, { yPercent: -50 })
+    gsap.set(ele, { yPercent: -50 })
     if (i % 2 == 0) {
         gsap.to(ele, {
             scrollTrigger: {
