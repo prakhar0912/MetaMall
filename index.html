@@ -38,16 +38,15 @@
         </div>
         <div class="mob-nav mobile grid" data-scroll data-scroll-sticky data-scroll-target="body">
             <div class="links">
-                <button onclick="location.href = '#'">Home</button>
-                <button
-                    onclick="document.querySelector('#team').scrollIntoView({behavior: 'smooth'})">Team</button>
-                <button onclick="location.href = './aboutUs.html'">About us</button>
-                <button onclick="document.querySelector('#team').scrollIntoView({behavior: 'smooth'})">Contact us</button>
-                    <button onclick="document.querySelector('#team').scrollIntoView({behavior: 'smooth'})">About us</button>
-
+                <button onclick="document.querySelector('.without').scrollIntoView({behavior: 'smooth'})">Home</button>
+                <button onclick="document.querySelector('#team').scrollIntoView({behavior: 'smooth'})">Team</button>
+                <button onclick="document.querySelector('.yeah').scrollIntoView({behavior: 'smooth'})"">About us</button>
+                <button onclick="document.querySelector('.contact').scrollIntoView({behavior: 'smooth'})">Contact us</button>
             </div>
-            <div class="logo">
-                <img onclick="location.href = './index.html'" src="./imgg/pre.svg" alt="">
+            <div class="socials">
+                <img src="./imgg/twitter.svg" alt=""   style="cursor: pointer" onclick="window.open('https://twitter.com/Metamall1')">
+                <img src="./imgg/instagram.svg" alt="" style="cursor: pointer" onclick="window.open('https://www.instagram.com/metamall_official/')">
+                <img src="./imgg/telegram.svg" alt=""  style="cursor: pointer" onclick="window.open('https://t.me/metamall_announcement')" >
             </div>
         </div>
         <section class="without" data-scroll data-scroll-speed="-10">
@@ -258,7 +257,7 @@
                         <img src="./imgg/dudeR.svg" alt=""> -->
                     </div>
                 </section>
-                <section class="investors">
+                <section class="investors" id="investors">
                     <div>
                         <h1 style="text-align: left;"><b>INVESTORS</b></h1>
                     </div>
@@ -271,7 +270,7 @@
 
                     </div>
                 </section>
-                <section class="contact">
+                <section class="contact"  id="contact">
                     <div>
                         <h1 style="text-align: left;"><b>CONTACT US</b></h1>
                     </div>
