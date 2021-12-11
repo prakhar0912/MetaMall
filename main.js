@@ -16,51 +16,78 @@ if (mobileDevice) {
         document.documentElement.style.setProperty('--vh', `${nice}px`);
     }, false);
     document.querySelectorAll('[data-scroll]').forEach(el => {
-        // el.removeAttribute("data-scroll-speed")
-        // el.removeAttribute("data-scroll")
-
-        if(el.getAttribute("data-scroll-speed") == "-10"){
+        if (el.getAttribute("data-scroll-speed") == "-10") {
             el.setAttribute("data-scroll-speed", "-0")
         }
-        if(el.getAttribute("data-scroll-speed") == "-1"){
+        if (el.getAttribute("data-scroll-speed") == "-1") {
             el.setAttribute("data-scroll-speed", "-0.1")
         }
-        if(el.getAttribute("data-scroll-speed") == "2"){
+        if (el.getAttribute("data-scroll-speed") == "2") {
             el.setAttribute("data-scroll-speed", "0.1")
         }
     })
+    gsap.to('.wrap > div', {
+        scrollTrigger: {
+            trigger: ".intro2",
+            start: "middle",
+            scroller: cont,
+            scrub: true,
+        },
+        xPercent: -30
+    })
+
+    gsap.to('video', {
+        scrollTrigger: {
+            trigger: '.intro',
+            scrub: true,
+            top: "",
+        },
+        yPercent: 50
+    })
+
+    document.querySelectorAll(".content-container > section").forEach((el, i) => {
+        let ele = el.querySelector(".img")
+        gsap.to(ele, {
+            scrollTrigger: {
+                trigger: el,
+                scrub: true,
+                scroller: cont,
+            },
+            yPercent: -20
+        })
+    })
 }
 else {
-    
+    let locoScroll = new LocomotiveScroll({
+        el: cont,
+        smooth: true,
+        multiplier: 1.9,
+        tablet: {
+            breakpoint: 0,
+            smooth: true,
+        },
+    })
+
+
+    locoScroll.on("scroll", ScrollTrigger.update)
+    ScrollTrigger.scrollerProxy(cont, {
+        scrollTop(value) {
+            return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+        },
+        getBoundingClientRect() {
+            return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+        },
+        pinType: cont.style.transform ? "transform" : "fixed"
+    });
+
+    // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+    // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
+    ScrollTrigger.refresh();
+
 
 }
 
-let locoScroll = new LocomotiveScroll({
-    el: cont,
-    smooth: true,
-    multiplier: 1.9,
-    tablet: {
-        breakpoint: 0,
-        smooth: true,
-    },
-})
-
-
-locoScroll.on("scroll", ScrollTrigger.update)
-ScrollTrigger.scrollerProxy(cont, {
-    scrollTop(value) {
-        return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-    },
-    getBoundingClientRect() {
-        return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
-    },
-    pinType: cont.style.transform ? "transform" : "fixed"
-});
-
-// each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
-ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-// after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
-ScrollTrigger.refresh();
 
 
 
@@ -75,7 +102,6 @@ gsap.to('.nav', {
     background: 'black',
     paddingTop: '20px',
     paddingBottom: '20px'
-    // color: 'black'
 })
 
 
