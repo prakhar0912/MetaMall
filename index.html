@@ -16,15 +16,15 @@
     <title>Kuvalyam</title>
 </head>
 
-<body data-scroll-id="a">
+<body>
     <div class="container">
         <div class="nav" data-scroll data-scroll-sticky data-scroll-target="body">
             <div class="left no-mobile">
-                <p>WHITEPENCIL</p>
-                <p onclick="location.href = './aboutUs.html'">TEAM</p>
+                <p>WHITEPAPER</p>
+                <p onclick="document.querySelector('#team').scrollIntoView({behavior: 'smooth'})">TEAM</p>
             </div>
             <div class="logo">
-                <img src="./imgg/pre.svg" alt="">
+                <img onclick="location.href = '#'" src="./imgg/pre.svg" alt="">
             </div>
             <div class="right no-mobile">
                 <img src="./imgg/twitter.svg" alt="">
@@ -32,36 +32,35 @@
                 <img src="./imgg/telegram.svg" alt="">
             </div>
         </div>
-        <div class="burger mobile" data-scroll data-scroll-sticky data-scroll-target="body">
+        <div class="burger mobile" data-scroll data-scroll-sticky data-scroll-target=".container">
             <div class="nline"></div>
             <div class="nline"></div>
         </div>
-        <div class="mob-nav mobile grid" data-scroll data-scroll-sticky data-scroll-target="body">
+        <div class="mob-nav mobile grid" data-scroll data-scroll-sticky data-scroll-target=".container">
             <div class="links">
                 <button onclick="location.href = '#'">Home</button>
                 <button
-                    onclick="document.querySelector('#projects').scrollIntoView({behavior: 'smooth'})">Projects</button>
-                <button>Blogs</button>
+                    onclick="document.querySelector('#team').scrollIntoView({behavior: 'smooth'})"></button>
                 <button onclick="location.href = './aboutUs.html'">About us</button>
-                <button onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">Contact
+                <button onclick="document.querySelector('#team').scrollIntoView({behavior: 'smooth'})">Contact
                     us</button>
+                    <button onclick="location.href = './aboutUs.html'">About us</button>
+                    <button onclick="location.href = './aboutUs.html'">About us</button>
+
             </div>
             <div class="logo">
                 <img onclick="location.href = './index.html'" src="./imgg/pre.svg" alt="">
             </div>
         </div>
-        <section class="without" data-scroll data-scroll-speed="-8">
+        <section class="without" data-scroll data-scroll-speed="-10">
             <div class="video parallax">
-                <div class="overlay top">
-                    
-                </div>
+                <div class="overlay top"></div>
+
                 <div class="noverlay">
                     <div class="left-line liner">
-                        <!-- <div class='block left-block'></div> -->
                     </div>
                     <div></div>
                     <div class="right-line liner">
-                        <!-- <div class='block left-block'></div> -->
                     </div>
                 </div>
                 <video src="./back.mp4" autoplay muted loop></video>
@@ -78,96 +77,116 @@
             </div>
             <div class="content-container">
                 <section class="intro">
-                    <div class="left" data-scroll data-scroll-speed="-1">
-                        <img class="skewElem1" src="./imgg/astroL.png" alt="">
-                    </div>
-                    <div class="middle">
-                        <h1 data-scroll data-scroll-speed="1">INTRODUCING <b class="bold">METAMALL</b></h1>
-                        <p data-scroll data-scroll-speed="1">MetaMall will provide an unprecedented VR experience on the
-                            blockchain to create, explore and
-                            trade
-                            in the
-                            first-ever virtual mall owned by its users.</p>
-                    </div>
-                    <div class="right" data-scroll data-scroll-speed="1">
-                        <img class="skewElem2" src="./imgg/astroR.png" alt="">
+                    <div class="cont">
+                        <div class="left" data-scroll data-scroll-speed="-1">
+                            <h1>WELCOME TO <b>METAMALL</b></h1>
+                            <p>
+                                Metamall will provide a first-of-its-kind virtual reality (VR) experience on the
+                                blockchain,
+                                allowing users to build, explore, and trade in their very own virtual mall.
+                            </p>
+                        </div>
+                        <div class="right img" data-scroll data-scroll-speed="2">
+                            <div>
+                                <img class="rot" src="./images/rot.png" alt="" style="left: 45%;">
+
+                                <img src="./images/1.png" alt="">
+                            </div>
+                        </div>
                     </div>
                 </section>
-                <section class="vr">
+                <section class="intro2">
                     <div>
-                        <div>
-                            <img data-scroll data-scroll-speed="1" class="skewElem1" src="./imgg/vr.png" alt="">
+                        <div class="left img" data-scroll data-scroll-speed="2">
+                            <img class="rot" src="./images/rot.png" alt="" style="right: 43%;">
+
+                            <img class="skewElem1" src="./images/2.png" alt="">
                         </div>
-                        <div>
-                            <h1>The Unique</h1>
-                            <h1 class="bold">VR Experience</h1>
-                            <p>Metamall features a unique VR experience with different themes, architecture and
-                                interactive VR
-                                properties.
-                                Token holders will be known as Metamallers. It will act as a central hub and welcome all
-                                levels of
-                                crypto
-                                experience. For the first time ever, users will have access to crypto information and
-                                immersive
-                                content all in
-                                one place. Metamallers will be able to earn revenue through real estate ownership,
-                                advertising
-                                revenue, play
-                                games, build networks and much more. By using the world’s most advanced real time 3D
-                                Creation
-                                Engine, Metamall
-                                will leverage this technology to create stunning visualisations and user experience.</p>
+                        <div class="right" data-scroll data-scroll-speed="-1">
+                            <h1>INTRODUCING <b>METAMALL</b></h1>
+                            <p>
+                                On Metamall, users can create stores, games, arena and experiences. Metamall constantly
+                                evolves with users’ imagination and creativity which in turn will further enrich user
+                                experience and build engagement and wealth on the platform.
+                            </p>
                         </div>
                     </div>
+                    <div class="wrap" data-scroll data-scroll-speed="3" data-scroll-direction="horizontal">
+                        <div>
+                            <div class="li">
+                                <div></div>
+                                <p>THE POWER OF DEFI & NFTS</p>
+                            </div>
+                            <div class="li">
+                                <div></div>
+                                <p>THE POWER OF DEFI & NFTS</p>
+                            </div>
+                            <div class="li">
+                                <div></div>
+                                <p>THE POWER OF DEFI & NFTS</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </section>
                 <section class="coin">
                     <div>
-                        <p class="grey">EARN</p>
-                        <h1>GENERATE REVENUE THROUGH</h1>
-                        <h1>MULTIPLE <b>INCOME STREAMS</b></h1>
-                        <p>
-                            Metamall will be a land of earning opportunities for Metamallers. Following the IDO,
-                            Metamall real
-                            estate will be
-                            made available for Metamallers to purchase. Other opportunities will consist of passive
-                            earning,
-                            staking and
-                            advertising.
-                        </p>
-                    </div>
-                    <div>
-                        <img class="skewElem2" src="./imgg/coin.png" alt="">
+                        <div class="left" data-scroll data-scroll-speed="-1">
+                            <p class="grey">EARN</p>
+                            <h1>GENERATE REVENUE THROUGH</h1>
+                            <h1>MULTIPLE <b>INCOME STREAMS</b></h1>
+                            <p>
+                                Metamall will be a land of earning opportunities for Metamallers. Following the IDO,
+                                Metamall real
+                                estate will be
+                                made available for Metamallers to purchase. Other opportunities will consist of passive
+                                earning,
+                                staking and
+                                advertising.
+                            </p>
+                        </div>
+                        <div class="right img" data-scroll data-scroll-speed="2">
+                            <img class="rot" src="./images/rot.png" alt="" style="left: 46%;">
+
+                            <img class="skewElem2" src="./images/3.png" alt="">
+                        </div>
                     </div>
                 </section>
                 <section class="heart">
                     <div>
-                        <img class="skewElem1" src="./imgg/heart.png" alt="">
-                    </div>
-                    <div>
-                        <p class="grey">CREATE & WIN</p>
-                        <h1>CREATE YOUR <b>OWN</b></h1>
-                        <h1><b>EXPERIENCE</b></h1>
-                        <p>
-                            On Metamall, users can create stores, games, arena and experiences. Metamall constantly
-                            evolves with users’ imagination and creativity which in turn will further enrich user
-                            experience and build engagement and wealth on the platform.
-                        </p>
-                    </div>
+                        <div class="left img" data-scroll data-scroll-speed="2">
+                            <img class="rot" src="./images/rot.png" alt="" style="left: 45%;">
 
+                            <img class="skewElem1" src="./images/1.png" alt="">
+                        </div>
+                        <div class="right" data-scroll data-scroll-speed="-1">
+                            <p class="grey">CREATE & WIN</p>
+                            <h1>CREATE YOUR <b>OWN</b></h1>
+                            <h1><b>EXPERIENCE</b></h1>
+                            <p>
+                                On Metamall, users can create stores, games, arena and experiences. Metamall constantly
+                                evolves with users’ imagination and creativity which in turn will further enrich user
+                                experience and build engagement and wealth on the platform.
+                            </p>
+                        </div>
+                    </div>
                 </section>
-
                 <section class="joys">
                     <div>
-                        <p class="grey">GAME ON</p>
-                        <h1>SHOP, MEET,</h1>
-                        <h1>PLAY, <b>WIN</b></h1>
-                        <p>
-                            Metamallers can have their own high street, lounges and game zones. Users can organise, host
-                            and win competitions on the Metamall as well as shop, meet and engage with friends.
-                        </p>
-                    </div>
-                    <div>
-                        <img class="skewElem2" src="./imgg/joys.png" alt="">
+                        <div class="left" data-scroll data-scroll-speed="-1">
+                            <p class="grey">GAME ON</p>
+                            <h1>SHOP, MEET,</h1>
+                            <h1>PLAY, <b>WIN</b></h1>
+                            <p>
+                                Metamallers can have their own high street, lounges and game zones. Users can organise,
+                                host
+                                and win competitions on the Metamall as well as shop, meet and engage with friends.
+                            </p>
+                        </div>
+                        <div class="right img" data-scroll data-scroll-speed="2">
+                            <img class="rot" src="./images/rot.png" alt="" style="right: 42%;">
+                            <img class="skewElem2" src="./images/2.png" alt="">
+                        </div>
                     </div>
                 </section>
 
@@ -182,7 +201,7 @@
                     <div>
                         <h1 class="boldHeading">THE TEAM</h1>
                     </div>
-                    <div class="dudes">
+                    <div class="dudes" id="team">
                         <div class="dude">
                             <img src="./imgg/dudeL.png" alt="">
                             <h1 class="bold">SERGE GIANCHANDANI</h1>
@@ -243,23 +262,6 @@
         </div>
 
     </div>
-    <script>
-        let mobileAndTabletCheck = () => {
-            let check = false;
-            (function (a) { if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true; })(navigator.userAgent || navigator.vendor || window.opera);
-            return check;
-        };
-
-        let mobileDevice = mobileAndTabletCheck()
-        if (mobileDevice) {
-            let nice = window.innerHeight * 0.01;
-            document.documentElement.style.setProperty('--vh', `${nice}px`);
-            window.addEventListener("resize", function () {
-                nice = window.innerHeight * 0.01;
-                document.documentElement.style.setProperty('--vh', `${nice}px`);
-            }, false);
-        }
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.3/dist/locomotive-scroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
