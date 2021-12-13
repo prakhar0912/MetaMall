@@ -382,7 +382,7 @@ p {
     width: 100vw;
     display: grid;
     grid-template-columns: 10% 80% 10%;
-    background-color: rgb(8, 8, 8);
+    background-color: rgb(0, 0, 0);
 }
 /* 
 section:not(.without) {
